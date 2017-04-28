@@ -1,0 +1,719 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/bg.png');
+}
+
+.wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    width: 100%;
+}
+
+.wrapper { 
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    min-width: 1100px;
+    max-width: 1300px;
+}
+
+
+.main-wrapper {
+    margin-bottom: -150px;
+}
+
+.main-wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, .main-wrapper:after {
+    height: 150px;
+}
+
+footer{
+    background-color: #008c72;
+    border-top: 3px solid #006aa8;
+    margin-top: 40px;
+}
+footer .wrapper{
+    margin-top: 0;
+}
+
+.logo {
+    background: url("../img/logo.png") 0 -30px no-repeat;
+    background-size: 300px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 100px;
+}
+
+.menu {
+    font-weight: 300;
+    font-size: 17.5px;
+}
+
+.menu-and-login-bar {
+    background-color: #008c72;
+    border-bottom: 3px solid #006aa8;   
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.menu-and-login-bar .menu {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu-and-login-bar .menu > li {
+    display: inline-block;
+    margin-left: -4px;
+    position: relative;
+}
+
+.menu-and-login-bar .menu > li:hover > a {
+    background-color: #00a284;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.menu-and-login-bar .menu .home {
+    display: block;
+    background: url("../img/home-5-xxl.png") 20px 20px no-repeat;
+    background-size: 20px 20px;
+    width: 40px;
+}
+
+.menu-and-login-bar .profile,
+.menu-and-login-bar .search {
+    display: inline-block;
+    float: right;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.menu-and-login-bar .profile:hover,
+.menu-and-login-bar .search:hover {
+    background-color: #00a284;
+}
+
+.menu-and-login-bar .profile {
+    position: relative;
+    background: url("../img/profile-icon.png") 20px 20px no-repeat;
+    background-size: 20px 20px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+/*////////////////Логин начался//////////////////////*/
+
+.half-transparent {
+    content: "";
+    background-color: rgba(0,140,114,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    cursor: auto;
+}
+
+.half-transparent.active {
+    display: block;
+}
+
+.login-block {
+    position: fixed;
+    background-color: #006aa8;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    overflow: hidden;
+    width: 460px;
+    height: 270px;
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5); 
+    transition: height 0.5s;
+}
+
+.login-block .login-title {
+    font-weight: 300;
+    font-size: 17px;
+    background-color: #008c72;
+    padding: 22px 20px 20px 20px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3); 
+}
+
+.login-block .login-title .close-login-block {
+    float: right;
+    font-size: 26px;
+    line-height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.login-block > form {
+    position: absolute;
+    padding: 20px;
+    height: 100%;
+    transition-property: left, opacity;
+    transition-duration: .6s, .3s;
+}
+
+.login-block .login-title .title-rest.active-title,
+.login-block .login-title .title-login.active-title,
+.login-block .login-title .title-registration.active-title{
+    display: inline;
+}
+
+.login-block .login-title .title-rest,
+.login-block .login-title .title-login,
+.login-block .login-title .title-registration{
+    display: none;
+}
+
+.login-block > form.rest {
+    left: 461px;
+    opacity: 0;
+}
+
+.login-block > form.registration.active-form + form.login {
+    left: 461px;
+    opacity: 0;
+}
+
+.login-block > form.login {
+    left: -461px;
+
+}
+
+
+.login-block > form.registration {
+    left: -461px;
+    opacity: 0;
+}
+
+.login-block > form.rest.active-form,
+.login-block > form.login.active-form,
+.login-block > form.registration.active-form{
+    left: 0;
+    opacity: 1;
+}
+
+.login-block form > p {
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.login-block form input {
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+    height: 35px;
+    width: 420px;
+    padding-left: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: 300;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, background-color, filter;
+}
+
+form.registration > .tool-tip {
+    position: relative;
+}
+
+.login-block form.registration > .tool-tip:not([data-error = ""])::after {
+    bottom: -47px;
+    border-radius: 5px;
+    border: 1px solid #9a2e2c;
+    padding: 5px;
+    line-height: 24px;
+    vertical-align: middle;
+    z-index: 5;
+    font-weight: 100;
+    font-size: 14px;
+    display: block;
+    opacity: 0.9;
+}
+
+.login-block form.registration > .tool-tip:not([data-error = ""])::before {
+    bottom: -13px;
+    border: 10px solid #b94a48;
+    filter: drop-shadow(0px -1px #9a2e2c);
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 6;
+    display: block;
+    opacity: 0.9;
+}
+
+.login-block form.registration > .tool-tip::after{
+    content: attr(data-error);
+    position: absolute;
+    background-color: #b94a48;
+    bottom: -55px;
+    right: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    vertical-align: middle;
+    z-index: 5;
+    font-weight: 100;
+    font-size: 14px;
+    display: block;
+    opacity: 0;
+    transition-property: opacity, bottom;
+    transition-duration: .2s;
+}
+
+.login-block form.registration > .tool-tip::before{
+    content: "";
+    position: absolute;
+    bottom: -21px;
+    right: 37px;
+    height: 0;
+    width: 0;
+    border: none;
+    filter: none;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 6;
+    display: block;
+    opacity: 0;
+    transition-property: opacity, bottom;
+    transition-duration: .2s;
+}
+
+.login-block form > input.input-rest {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-block form input:focus {
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6)); 
+}
+
+.login-block form > input[type = "button"].btn {
+    display: inline-block;
+    width: 110px;
+    font-size: 16px;
+    margin-right: 10px;
+    color: white;
+    padding: 0;
+    background-color: #008c72;
+    cursor: pointer;
+}
+
+.login-block form > input[type = "button"].btn-rest {
+    display: block;
+    width: 200px;
+    font-size: 16px;
+    color: white;
+    padding: 0;
+    background-color: #008c72;
+    cursor: pointer;
+    margin: auto;
+}
+
+.login-block form > input[type = "button"].btn-reg {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+    padding: 0;
+    background-color: #008c72;
+    cursor: pointer;
+    margin: auto;
+}
+
+.login-block form > input[type = "button"]:hover {
+    background-color: #00a284;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.5); 
+}
+
+.login-block form > a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.login-block form > span.to-login {
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 50%;
+    bottom: 100px;
+    transform: translate( -50%, -50%);
+    font-weight: 300;
+    opacity: 0.4;
+    cursor: pointer; 
+}
+
+.login-block form > span.to-login:hover {
+    opacity: 0.5;
+}
+
+.login-block form > span.to-reset:hover {
+    opacity: 0.5;
+}
+
+.login-block form > .to-reset{
+    font-weight: 100;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.login-block form > .to-registration {
+    padding-right: 7px;
+    border-right: 2px solid #008c72;
+    cursor: pointer;
+}
+
+/*
+.login-block .registration > input {
+    padding: 1px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+*/
+
+.login-block .registration .registration-btn {
+    margin-top: 14px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-block .registration > .to-login{
+    margin: 0 auto -10px aut;
+}
+/*//////////Логин закончился////////////////*/
+
+.menu-and-login-bar .profile.active {
+    background-color: #015344;
+}
+
+.menu-and-login-bar .search {
+    background: url("../img/search-icon.png") 21px 21px no-repeat;
+    background-size: 19px 19px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.menu-and-login-bar input[type="text"] {
+    float: right;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    font-size: 18px;
+    color: white;
+    margin-right: 1px;
+    background-color: #00a284;
+    border: none;
+    transition-property: width;
+    transition-duration: 0.2s;
+}
+
+.menu-and-login-bar input[id="search"]:focus {
+    width: 150px;
+    height: 57px;
+    opacity: 1;
+    outline: 0;
+    padding-left: 7px;
+}
+
+.menu-and-login-bar input[id="search"]:focus + label {
+    background-color: #015344;
+}
+
+.menu-and-login-bar .menu .home .replace {
+    opacity: 0;
+}
+
+.menu-and-login-bar .menu > li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.menu-and-login-bar .menu > li .active-bar-elem {
+    background-color: #015344;
+} 
+
+.menu-and-login-bar .sub-menu {
+    font-size: 14px;
+    position: absolute;
+    top: 60px;
+    background-color: #008c72;
+    display: none;
+}
+.menu-and-login-bar .menu > li:hover .sub-menu {
+    z-index: 1;
+    display: block;
+    border-top: 3px solid #006aa8;
+}
+
+.menu-and-login-bar .sub-menu li > a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px dotted #00a284;
+    width: 175px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.menu-and-login-bar .sub-menu li:hover > a {
+    background-color: #00a284;
+}
+
+.sidebar, main {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    
+}
+
+.sidebar {
+    width: 25%;
+    float: left;
+    margin-left: 10px;
+}
+
+.sidebar .sidebar-block {
+    margin-bottom: 40px;
+}
+
+.sidebar .sidebar-block h2 {
+    position: relative;
+    font-size: 13px;
+    display: block;
+    height: 14px;
+    background-color: #008c72;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+.sidebar .sidebar-block h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: 10px solid #008c72;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom: none;
+    top: 32px;
+}
+
+.sidebar .latest-publics .content {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar .latest-publics .content .news {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 75px;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: rgba(0,140,114,0.05);
+    transition-property: backrgound-color;
+    transition-duration: 0.2s;
+}
+
+.sidebar .latest-publics .content .news:hover {
+    background-color: rgba(0,140,114,0.08);
+    transition-property: backrgound-color;
+    transition-duration: 0.2s;
+}
+
+.sidebar .latest-publics .content .news img {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    height: 65px;
+    width: 65px;
+    margin-right: 20px;
+    border: 1px solid rgba(106,112,116,0.4);
+}
+
+.sidebar .latest-publics .content .news h3 {
+    float: left;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 18px;
+    padding-top: 2px;
+    width: 179px;
+    height: 38px;
+}
+
+.sidebar .latest-publics .content .news a {
+    color: #6a7074;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.sidebar .latest-publics .content .news a:hover {
+    color: #006aa8;
+}
+
+.sidebar .latest-publics .content .news span {
+    float: left;
+    color: #6a7074;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.5;
+    padding-top: 10px;
+    width: 179px;
+    height: 5px;
+    text-transform: lowercase;
+}
+
+.sidebar .vote h3{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.sidebar .vote .answer-options {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.sidebar .vote .answer-options label {
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    margin-left: 27px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.vote .answer-options input[name="vote-sidebar"]:checked + label {
+    color: #008c72;
+}
+
+.vote .answer-options input[name="vote-sidebar"] {
+    display: none;
+}
+
+.vote .answer-options input[name="vote-sidebar"] + label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: -20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #008c72;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.vote .answer-options input[name="vote-sidebar"]:checked + label::before {
+    background-color: #008c72;
+}
+
+.vote .answer-buttons input {
+    border: none;
+    background-color: #008c72;
+    font-weight: 300;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    height: 30px;
+    margin-left: 5px;
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+.vote .answer-buttons input:hover {
+    background-color: #00a284;
+}
+
+.vote .answer-buttons input[value="Результаты"] {
+    width: 100px;
+}
+
+.site-footer .coopyright {
+    color: rgba(255,255,255,0.5);
+    position: absolute;
+    bottom: -20px;
+    float: left;
+    margin-top: 20px;
+}
+
+.site-footer .designed-by {
+    width: 80px;
+    height: 80px;
+    float: left; 
+    margin: 25px 0 0 25px;
+    opacity: 0.5;
+}
+
+.site-footer .eighteen-plus {
+    position: relative;
+    background: url('../img/eighteen.png') no-repeat;
+    background-size: 90px;
+    float: right;
+    margin-top: 30px;
+    height: 90px;
+    width: 90px;
+}
+
+
+.main {
+    width: 72%;
+    float: right;
+}
+
+
+
+
+

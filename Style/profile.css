@@ -1,0 +1,93 @@
+.profile-sidebar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    width: 100%;
+    background-color: #008c72;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.profile-sidebar .photo {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    display: block;
+    background: url("../img/2.jpg") 0 -60px no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.profile-sidebar .name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+    padding: 12px 0;
+    background-color: rgba(0,106,168, 0.5);
+    border-bottom: 1px dotted #00a284;
+}
+
+.profile-sidebar .profile-menu li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    top: .6em;
+    left: 7px;
+}
+
+.profile-sidebar .profile-menu .settings a::before {
+    background-image: url("../img/settings.png");
+}
+
+.profile-sidebar .profile-menu .my-publication a:before {
+    background-image: url("../img/video-icon-29.png");
+}
+
+.profile-sidebar .profile-menu .my-profile a::before {
+    background-image: url("../img/profile-icon.png");
+}
+
+.profile-sidebar .profile-menu .mail a::before {
+    background-image: url("../img/mail-icon.png");
+}
+
+.profile-sidebar .profile-menu li {
+    font-weight: 300;
+    position: relative;
+    padding-left: 5px;
+    transition-duration: .3s;
+    transition-property: background;
+}
+
+.profile-sidebar .profile-menu li:hover {
+    background-color: #00a284;
+    border-left: 1px solid #006aa8;
+    margin-left: -1px;
+}
+
+.profile-sidebar .profile-menu li a {
+    width: auto;
+    display: block;
+    padding: 10px;
+    padding-left: 25px;
+    cursor: pointer;
+}

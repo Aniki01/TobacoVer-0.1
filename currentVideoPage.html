@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tobacco</title>
+    <link rel="shortcut icon" href="img/flower.ico" />
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="style/styleForCurrentVideoPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    
+</head>
+<body>
+    <header>
+            <div class="wrapper">
+                <div class = "logo" ></div>
+            </div>
+            <nav class = "menu-and-login-bar">
+                <div class = "wrapper">
+                    <ul class = "menu">
+                        <li><a href="index.html" class = "home"><span class = "replace">Домой</span></a></li>
+                        <li>
+                            <a href="" class = "sorts">Сорта</a>
+<!--
+                            <ul class = "sub-menu">
+                                <li><a href="">Сабменю-1</a></li>
+                                <li><a href="">Сабменю-2</a></li>
+                                <li><a href="">Сабменю-3</a></li>
+                            </ul>
+-->
+                        </li>
+                        <li><a href="" class = "growing">Выращивание</a></li>
+                        <li><a href="" class = "literature">Литература</a></li>
+                        <li><a href="video.html" class = "video">Видео</a></li>
+                        <li><a href="" class = "contacts">Контакты</a></li>
+                    </ul>
+                    <div class = "profile"></div>
+                    <div class = "half-transparent">
+                            <div class = "login-block">
+                                <div class = "login-title"><span>Вход на сайт</span><span  class = "close-login-block">&times;</span></div>
+                                <form action = "post">
+                                    <input type = "email" placeholder = "E-mail" required>
+                                    <input type = "password" placeholder = "Пароль" required>
+                                    <input class = "btn" type="submit" value = "Войти">
+                                    <a href="" class = "registration">Регистрация</a>
+                                    <a href="" class = "forgot-password">Забыли пароль?</a>
+                                </form>
+                            </div>
+                        </div>
+                    <input id="search" type="text" autocomplete="off">
+                    <label class="search" for="search"></label>
+                </div>
+            </nav>  
+    </header>
+              
+    <div class="wrapper clearfix main-wrapper">
+        <aside class = "sidebar">
+            <section class="latest-publics sidebar-block">
+                <h2>Последние публикации</h2>
+                <div class="content">
+                    <div class="news">
+                        <img src = "img/1.jpg">
+                        <div class="info">
+                            <h3><a href="#">Конь под маринадом</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src = "img/2.jpg">
+                            <div class="info">
+                            <h3><a href="#">Азбука в нейронных табуретках</a></h3>
+                        <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src = "img/3.jpg">
+                        <div class="info">
+                            <h3><a href="#">Купля/продажа конопли</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src = "img/4.jpg">
+                        <div class="info">
+                            <h3><a href="#">Слабительное по самым низким ценам</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src = "img/5.jpg">
+                        <div class="info">
+                            <h3><a href="#">Сущность в виде гномика</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="vote sidebar-block">
+                <h2>Голосование</h2>
+                <h3>Как Вам наш сайт?</h3>
+                <form>
+                <div class="answer-options">
+                    <input name='vote-sidebar' id='radio-1' type='radio'><label class='vote-label' for='radio-1'>Невероятно</label>
+                    <input name='vote-sidebar' id='radio-2' type='radio'><label class='vote-label' for='radio-2'>Хорошо</label>
+                    <input name='vote-sidebar' id='radio-3' type='radio'><label class='vote-label' for='radio-3'>Могло быть лучше</label>
+                    <input name='vote-sidebar' id='radio-4' type='radio'><label class='vote-label' for='radio-4'>Без комментариев</label>
+                </div>
+                <div class="answer-buttons">
+                    <input type="submit" value="Выбрать">
+                    <input type="button" value="Результаты">
+                </div>
+                </form>
+            </section>
+        </aside>
+        
+        <main class = "main">
+           
+            <article class = "video-post">
+                <section class = "title">Дневник тобаковода 
+                     <time class = "upload-date">09.04.2017</time>
+                 </section>
+                 <div class = "preview">
+                     <img src = "img/1403639039621.png"  alt="">
+                     <div class="author">Автор: <span class="who-is-autor">Аники</span></div>
+                 </div>
+                 <section class = "about-post">
+                    <div class="themes"><span class = "bold">Темы&#58; </span> Бла, бла, бла.</div>
+                    <div class="discription">
+                        <span class = "bold">Описание&#58; </span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum quam, eligendi delectus. Eos explicabo optio magnam at sapiente, qui sed eligendi, dolorem quisquam, maiores saepe, odio natus impedit obcaecati unde?
+                     </div>
+                 </section>
+             </article>
+                 <div class = "video-palyer">
+                    <iframe  src="https://www.youtube.com/embed/50bsUUZbDu8" frameborder="0" allowfullscreen class = "video-palyer" width = "100%" height = "500px"></iframe>    
+                 </div>
+                       
+        </main>
+    </div>
+    <footer class = "site-footer">
+       <div class="wrapper">
+           <div class = "eighteen-plus"></div>
+        <div class = "coopyright">&copy; Copyright 2017</div>
+        <img src="img/DISIGNED.png" class = designed-by>
+       </div>
+    </footer>
+    <script src = "js/script.js"></script>
+</body>
+</html>

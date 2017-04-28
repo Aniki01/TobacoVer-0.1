@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tobacco</title>
+    <link rel="shortcut icon" href="img/flower.ico" />
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/stylesheet.css">
+    <link rel="stylesheet" href="style/profile.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+    <script src="js/mediaelement-and-player.min.js"></script>
+</head>
+<body>
+   <!--  МОДАЛЬНОЕ ОКНО  -->
+    <div class = "half-transparent">
+        <div id = "login-etc-block" class = "login-block">
+                               
+            <div class = "login-title">
+                <span class="title-registration ">Регистрация</span>
+                                   
+                <span class="title-login active-title toggle-title">Вход на сайт</span>
+                                    
+                <span class="title-rest ">Восстановление пароля</span>
+                                    
+                <span class = "close-login-block">&times;</span>
+            </div>
+            
+            <form class="registration">
+                <div class = "tool-tip" data-error = "">
+                    <input type="text" id ="login" name = "login" data-has-error = "yes"  placeholder = "Введите ваш логин" disabled>
+                </div>
+                <div class = "tool-tip" data-error = "">
+                    <input type="email" id = "email" name = "email" data-has-error = "yes" placeholder = "Введиет ваш E-mail" disabled>
+                </div>            
+                <div class = "tool-tip" data-error = "">
+                    <input type = "password" id = "password" name = "password" placeholder = "Введите ваш пароль" disabled>
+                </div>
+                <div class = "tool-tip" data-error = "">
+                    <input type = "password" id = "secondPassword" name = "secondPassword" data-equal-whith = "password" data-is-same = "false" placeholder = "Введите ваш пароль еще раз" disabled>
+                </div>
+                <input id = "registration-btn" class = "btn-reg" type = "button" value = "Зарегистрироваться" disabled>
+                <span class = "to-login" data-btn-to = "login-form">Вернуться назад</span>
+            </form>
+                                
+            <form class="login active-form" action = "post">
+                <input type = "email" placeholder = "E-mail" required>
+                <input type = "password" placeholder = "Пароль" required>
+                <input class = "btn" type="button" value = "Войти">
+                <span class = "to-registration" data-btn-to = "registration-form">Регистрация</span>
+                <span class = "to-reset" data-btn-to = "reset-form">Забыли пароль?</span>
+            </form>
+                                
+            <form class="rest" action = "post">
+                <p>Для восстановления пароля необходимо указать адрес Вашей электронной почты, на которую зарегистрирован аккаунт.</p>
+                <input class="input-rest" type = "email" placeholder = "E-mail" required disabled>
+                <input class = "btn-rest" type="button" value = "Отправить письмо" disabled>
+                <span class = "to-login" data-btn-to = "login-form">Вернуться назад</span>
+            </form>
+        </div>
+    </div>
+<!--    Окно закончилось-->
+    <header>
+            <div class="wrapper">
+                <div class = "logo" ></div>
+            </div>
+            <nav class = "menu-and-login-bar">
+                <div class = "wrapper">
+                    <ul class = "menu">
+                        <li><a href="index.html" class = "home"><span class = "replace">Домой</span></a></li>
+                        <li>
+                            <a href="" class = "sorts">Сорта</a>
+<!--
+                            <ul class = "sub-menu">
+                                <li><a href="">Сабменю-1</a></li>
+                                <li><a href="">Сабменю-2</a></li>
+                                <li><a href="">Сабменю-3</a></li>
+                            </ul>
+-->
+                        </li>
+                        <li><a href="" class = "growing">Выращивание</a></li>
+                        <li><a href="" class = "literature">Литература</a></li>
+                        <li><a href="video.html" class = "video">Видео</a></li>
+                        <li><a href="" class = "contacts">Контакты</a></li>
+                    </ul>
+                    <div class = "profile"></div>
+                    <input id="search" type="text" autocomplete="off">
+                    <label class="search" for="search"></label>
+                </div>
+            </nav>  
+    </header>
+              
+    <div class="wrapper clearfix">
+        <aside class = "sidebar">
+              <section class="profile-sidebar">
+                  <div class="photo"><div class="name"><span>Вадим Чиликов</span></div></div>
+                  <ul class="profile-menu">
+                      <li class = "my-profile"><a>Мой профиль</a></li>
+                      <li class = "my-publication"><a>Мои публикации</a></li>
+                      <li class = "settings"><a>Настройки</a></li>
+                      <li class = "mail"><a>Почта</a></li>
+                  </ul>
+              </section>
+            <div class="latest-publics sidebar-block">
+                <h2>Последние публикации</h2>
+                <div class="content">
+                    <div class="news">
+                        <img src="img/1.jpg">
+                        <div class="info">
+                            <h3><a href="#">Конь под маринадом</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src="img/2.jpg">
+                            <div class="info">
+                            <h3><a href="#">Азбука в нейронных табуретках</a></h3>
+                        <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src="img/3.jpg">
+                        <div class="info">
+                            <h3><a href="#">Купля/продажа конопли</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src="img/4.jpg">
+                        <div class="info">
+                            <h3><a href="#">Слабительное по самым низким ценам</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                    <div class="news">
+                        <img src="img/5.jpg">
+                        <div class="info">
+                            <h3><a href="#">Сущность в виде гномика</a></h3>
+                            <span>3 минуты назад</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="vote sidebar-block">
+                <h2>Голосование</h2>
+                <h3>Как Вам наш сайт?</h3>
+                <form>
+                <div class="answer-options">
+                    <input name='vote-sidebar' id='radio-1' type='radio'><label class='vote-label' for='radio-1'>Невероятно</label>
+                    <input name='vote-sidebar' id='radio-2' type='radio'><label class='vote-label' for='radio-2'>Хорошо</label>
+                    <input name='vote-sidebar' id='radio-3' type='radio'><label class='vote-label' for='radio-3'>Могло быть лучше</label>
+                    <input name='vote-sidebar' id='radio-4' type='radio'><label class='vote-label' for='radio-4'>Без комментариев</label>
+                </div>
+                <div class="answer-buttons">
+                    <input type="submit" value="Выбрать">
+                    <input type="button" value="Результаты">
+                </div>
+                </form>
+            </div>
+        </aside>
+        
+        <main class = "main">
+             <section class="videos clearfix">
+                <div class="player">
+                    <iframe  src="https://www.youtube.com/embed/50bsUUZbDu8" frameborder="0" allowfullscreen></iframe>    
+                </div>
+             <section class="same-videos">
+                    <div class = "about-video active-about-video" id = "video-1">
+                        <h3 class = "title-of-video">Дневник табаковода № 61</h3>
+                        <p>Посев семян табака 20 февраля</p>
+                    </div>
+                    <div class = "about-video" id = "video-2">
+                        <h3 class = "title-of-video">Дневник табаковода № 62</h3>
+                        <p>От всходов до пикировки 16.03</p>
+                    </div>
+                    <div class = "about-video" id = "video-3">
+                        <h3 class = "title-of-video">Дневник табаковода № 64</h3>
+                        <p>Пикировка рассады 26.03</p>
+                    </div>
+                </section>
+             </section>
+             
+             
+             
+             <article class="about-site">
+                 <h2>Информация о сайте</h2>
+                 <p>К большому сожалению в России огромный процент курящих людей. Люди никак не могут отказаться от своей вредной пагубной привычки, которая вредит не только курящему человеку, но и его окружению. Согласно данным ВЦИОМ, курит около 1/3 всех россиян. Регулярно курят 75% мужчин и 21% женщин. Это ужасающая статистика. Самое страшное то, что за последние годы вырос процент курящих женщин. Мы настоятельно призываем вас отказаться от курения. Эта привычка, которая вас убивает изнутри. </p>
+                 
+                 <p>Данная статья посвящена курящим людям, которые никак не могут отказаться от курения. Которые пытались уже неоднократно бросить и перепробовали все способы. Для вас есть замечательное решение — выращивание табака в домашних условиях. Это дело крайне увлекательное и интересное. При соблюдении всех правил выращивания, готовый продукт получается очень высокого качества. Это не сравнится с тем, что мы покупаем в магазинах под видом табака и сигарет. Табачные компании откровенно травят курильщиков, добавляя в сигареты ядовитые химические реагенты, чтобы снизить конечную себестоимость продукта. Вместе с этим цена на табачную продукцию в магазинах повышается с каждым месяцем. Для справки. Себестоимость 1 пачки сигарет составляет от 1 до 5 рублей за одну пачку.</p>
+                 
+                 <p>Из всего этого можно сделать вывод. Табачные компании травят курильщиков за огромные деньги, наживая просто баснословные капиталы! Немного математики. В 2016 году средняя цена за пачку сигарет составляет 75-80 рублей. Средний курильщик выкуривает по 10-20 сигарет в день (по 0,5-1 пачки). 80*365=29200 рублей. То есть средний курильщик тратит на сигареты в год 15-35 тысяч рублей. А ведь эти деньги можно потратить с немалой пользой. Преимущества выращивания табака в домашних условиях. Выращивание и переработка табака на огороде не несёт никаких затрат (кроме первоначальных затрат на покупку семян). После того, как получили первый урожай, вам больше не нужно каждый день покупать сигареты в магазине, тратя на это немалые деньги. У вас у самого будет очень огромное количество табака, которого не только хватит самому, но и можно угостить своих знакомых. Но самое главное — продукт будет натуральным, а значит не таким вредным.</p>
+                 
+                 <p>Выращивание табака — это хобби, во время которого человек отдыхает. В этом есть что то сакральное. Вы почувствуете себя кубинским табачным бароном. В этой статье мы расскажем вам всё о выращивании табака, вы узнаете весь процесс — от А до Я. Всё будет сопровождаться наглядными видео, разобраться будет очень просто. С чего начать выращивание табака на огороде? С чего начать выращивание табака на своём огороде? Такой вопрос задают многие начинающие табаководы. Давайте попробуем разобраться. Необходимо определиться с сортом, подготовить ёмкости для посадки рассады, подготовить грунт для посадки рассады.</p>
+             </article>
+             
+        </main>
+    </div>
+    <footer class = "site-footer">
+       <div class="wrapper">
+           <div class = "eighteen-plus"></div>
+        <div class = "coopyright">&copy; Copyright 2017</div>
+        <img src="img/DISIGNED.png" class = designed-by>
+       </div>
+    </footer>
+    <script src = "js/script.js"></script>
+    <script src = "js/index.js"></script>
+    <script src = "js/registr.js"></script>
+</body>
+</html>
