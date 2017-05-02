@@ -20,7 +20,9 @@ header {
     width: 60%;
     min-width: 1100px;
     max-width: 1300px;
+    padding: 0 15px;
 }
+
 
 
 .main-wrapper {
@@ -51,6 +53,7 @@ footer .wrapper{
     margin-bottom: 20px;
     width: 300px;
     height: 100px;
+    margin: 0 0 0 10px;
 }
 
 .menu {
