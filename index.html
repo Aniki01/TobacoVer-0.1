@@ -81,7 +81,7 @@
 -->
                         </li>
                         <li><a href="" class = "growing">Выращивание</a></li>
-                        <li><a href="" class = "literature">Литература</a></li>
+                        <li><a href="literatura.html" class = "literature">Литература</a></li>
                         <li><a href="video.html" class = "video">Видео</a></li>
                         <li><a href="" class = "contacts">Контакты</a></li>
                     </ul>
@@ -147,15 +147,15 @@
             <div class="vote sidebar-block">
                 <h2>Голосование</h2>
                 <h3>Как Вам наш сайт?</h3>
-                <form>
+                <form id = "vote">
                 <div class="answer-options">
-                    <input name='vote-sidebar' id='radio-1' type='radio'><label class='vote-label' for='radio-1'>Невероятно</label>
-                    <input name='vote-sidebar' id='radio-2' type='radio'><label class='vote-label' for='radio-2'>Хорошо</label>
-                    <input name='vote-sidebar' id='radio-3' type='radio'><label class='vote-label' for='radio-3'>Могло быть лучше</label>
-                    <input name='vote-sidebar' id='radio-4' type='radio'><label class='vote-label' for='radio-4'>Без комментариев</label>
+                    <input name='vote-sidebar' id='radio-1' type='radio' value = incredibly checked><label class='vote-label' for='radio-1'>Невероятно</label>
+                    <input name='vote-sidebar' id='radio-2' type='radio' value = "good"><label class='vote-label' for='radio-2'>Хорошо</label>
+                    <input name='vote-sidebar' id='radio-3' type='radio' value = "better"><label class='vote-label' for='radio-3'>Могло быть лучше</label>
+                    <input name='vote-sidebar' id='radio-4' type='radio' value = "noComments"><label class='vote-label' for='radio-4'>Без комментариев</label>
                 </div>
                 <div class="answer-buttons">
-                    <input type="submit" value="Выбрать">
+                    <input type="button" value="Выбрать">
                     <input type="button" value="Результаты">
                 </div>
                 </form>
@@ -208,6 +208,7 @@
     <script src = "js/script.js"></script>
     <script src = "js/index.js"></script>
     <script src = "js/registr.js"></script>
+    <script src = "js/vote.js"></script>
     </div>
 </body>
 </html>

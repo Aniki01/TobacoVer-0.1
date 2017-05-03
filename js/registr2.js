@@ -179,11 +179,12 @@ function btnEvent(btn, inps, callback){
         let passwords = [inps[2], inps[3]];
         let boolka = true;
 
-         if(onInputPasswordEvent(passwords))
+         if(!allEmptyStatus(inps))
                 boolka = false;
-        if(!allEmptyStatus(inps))
+         
+        if(onInputPasswordEvent(passwords))
                 boolka = false;
-        
+
         onChangeInputEvent(inps[0], function(loginStat){
                 onChangeInputEvent(inps[1], function(emailStat) {
                         if(loginStat && emailStat && boolka){

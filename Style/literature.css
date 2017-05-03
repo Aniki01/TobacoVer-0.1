@@ -1,8 +1,8 @@
-/*Страничка с видосами*/
+/*Страничка со статьями*/
 
 
 
-.video-post {
+.literature-post {
     background-color: rgba(0,140,114,0.05);
     position: relative;
     height: 300px;
@@ -11,7 +11,7 @@
 }
 
 
-.video-post .title {
+.literature-post .title {
     box-sizing: border-box;
     padding: 10px 0 10px 20px;
     background-color: #006aa8;
@@ -20,7 +20,7 @@
     margin-bottom: 10px;
 }
 
-.video-post .title .upload-date {
+.literature-post .title .upload-date {
     font-weight: 100;
     opacity: 0.5;
     color: white;
@@ -28,7 +28,7 @@
     float: right;
 }
 
-.video-post .preview {
+.literature-post .preview {
     width: 250px;
     height: 210px;
     float: left;
@@ -36,37 +36,37 @@
     background-color: rgba(0,140,114,0.05);
 }
 
-.video-post .preview .author {
+.literature-post .preview .author {
     font-weight: 300;
     text-align: center;
     color: #6a7074;
     margin-top: 5px;
 }
 
-.video-post .preview a {
+.literature-post .preview a {
     display: block;
 }
 
-.video-post .preview img {
+.literature-post .preview img {
     height: 100%;
 }
 
-.video-post .about-post .themes {
+.literature-post .about-post .themes {
     margin-bottom: 10px;
 }
 
-.video-post  .bold {
+.literature-post  .bold {
     font-weight: bold;
 }
 
-.video-post .about-post .discription {
+.literature-post .about-post .discription {
     overflow: hidden;
     text-overflow: clip;
     white-space: wrap;
     max-height: 9em;
 }
 
-.video-post  .view-button {
+.literature-post  .view-button {
     position: absolute;
     bottom: 15px;
     right: 20px;
@@ -83,7 +83,7 @@
     transition-property: background-color;
 }
 
-.video-post  .view-button:hover {
+.literature-post  .view-button:hover {
     background-color: #0078be;
 }
 
@@ -105,14 +105,14 @@
     vertical-align: middle;
 }
 
-.main .page-video{
+.main .page-literature{
     padding: 9px 15px;
     margin-bottom: 20px;    
     background-color: #008c72;
     color: white;   
 }
 
-.main .page-video:after{
+.main .page-literature:after{
     content: "";
     display: table;
     clear: both; 

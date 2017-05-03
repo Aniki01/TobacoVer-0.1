@@ -1,15 +1,15 @@
-.video-post .video-player {
+.literature-post .video-player {
     width: 100%;
     margin-bottom: 15px;
     height: 400px;
 }
 
-.video-post .video-player iframe {
+.literature-post .video-player iframe {
     width: 100%;
     height: 100%;
 }
 
-.video-post .title {
+.literature-post .title {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
     margin-bottom: 10px;
 }
 
-.video-post .title .upload-date {
+.literature-post .title .upload-date {
     font-weight: 100;
     opacity: 0.5;
     float: right;
@@ -28,7 +28,7 @@
     margin-right: 5px;
 }
 
-.video-post .preview {
+.literature-post .preview {
     width: 250px;
     height: 210px;
     float: left;
@@ -36,26 +36,26 @@
     background-color: rgba(0,140,114,0.05);
 }
 
-.video-post .preview .author {
+.literature-post .preview .author {
     font-weight: 300;
     text-align: center;
     color: #6a7074;
     margin-top: 5px;
 }
 
-.video-post .preview img {
+.literature-post .preview img {
     height: 100%;
 }
 
-.video-post .about-post .themes {
+.literature-post .about-post .themes {
     margin-bottom: 10px;
 }
 
-.video-post .about-post .bold {
+.literature-post .about-post .bold {
     font-weight: bold;
 }
 
-.video-post .about-post .discription {
+.literature-post .about-post .discription {
     overflow: hidden;
     text-overflow: clip;
     white-space: wrap;
